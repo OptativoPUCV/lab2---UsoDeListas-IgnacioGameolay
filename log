@@ -48,3 +48,24 @@ exercises.c:86:20: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 fd27ef0
+Wed 20 Mar 2024 08:44:42 PM UTC: 
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:7: error: implicit declaration of function ‘pushFron’; did you mean ‘pushFront’? [-Werror=implicit-function-declaration]
+   50 |       pushFron(L, dato);
+      |       ^~~~~~~~
+      |       pushFront
+exercises.c:50:19: error: ‘dato’ undeclared (first use in this function)
+   50 |       pushFron(L, dato);
+      |                   ^~~~
+exercises.c:50:19: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:46:9: error: variable ‘ptrDato’ set but not used [-Werror=unused-but-set-variable]
+   46 |    int* ptrDato;
+      |         ^~~~~~~
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:86:20: error: comparison between pointer and integer [-Werror]
+   86 |     if (elementAux == elem) popCurrent(L);
+      |                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+c941cc8
