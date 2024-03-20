@@ -114,3 +114,52 @@ Wed 20 Mar 2024 08:52:58 PM UTC:
  tests:  3|2
 total_score: 40/70
 429dfb1
+Wed 20 Mar 2024 09:00:29 PM UTC: 
+ exercises.c | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  122 |   Stack* pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:122:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:123:32: error: multi-character character constant [-Werror=multichar]
+  123 |   for (int i = 0; cadena[i] != '/0'; i++){
+      |                                ^~~~
+exercises.c:125:49: error: expected ‘)’ before '['
+  125 |     if (carac == '(' || carac == '{' || carac ++ '['){
+      |        ~                                        ^~~~
+      |                                                 )
+exercises.c:126:18: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  126 |       push(pila, carac);
+      |                  ^~~~~
+      |                  |
+      |                  char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:127:56: error: expected ‘)’ before ']'
+  127 |     } else if (carac == ')' || carac == '}' || carac ++ ']'){
+      |               ~                                        ^~~~
+      |                                                        )
+exercises.c:133:17: error: switch quantity not an integer
+  133 |         switch (top(pila)){
+      |                 ^~~
+exercises.c:135:15: error: ‘cartac’ undeclared (first use in this function); did you mean ‘carac’?
+  135 |           if (cartac == '}') pop(pila);
+      |               ^~~~~~
+      |               carac
+exercises.c:135:15: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:140:28: error: expected ‘;’ before ‘}’ token
+  140 |           default: return 0
+      |                            ^
+      |                            ;
+  141 |         }
+      |         ~                   
+cc1: all warnings being treated as errors
+Compilation failed
+4c27e8d
