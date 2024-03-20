@@ -309,3 +309,17 @@ exercises.c:137:17: error: switch quantity not an integer
       |                 ^~~
 Compilation failed
 a8ce998
+Wed 20 Mar 2024 09:03:05 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  128 |       push(pila, (void*) carac);
+      |                  ^
+exercises.c:137:17: error: switch quantity not an integer
+  137 |         switch (top(pila)){
+      |                 ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+df5b734
