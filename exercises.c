@@ -83,7 +83,7 @@ void eliminaElementos(List*L, int elem){
   int *elementAux = first(L);
   
   while (elementAux != NULL){
-    if (*elementAux == *elem) popCurrent(L);
+    if (*elementAux == elem) popCurrent(L);
       elementAux = next(L);
   }
   
