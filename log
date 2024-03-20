@@ -737,3 +737,8 @@ exercises.c:49:15: error: ‘ptrDato’ may be used uninitialized in this functi
 cc1: all warnings being treated as errors
 Compilation failed
 1c4987c
+Wed 20 Mar 2024 09:18:49 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+363803a
