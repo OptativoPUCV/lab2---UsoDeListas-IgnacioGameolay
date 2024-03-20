@@ -244,3 +244,33 @@ exercises.c:133:17: error: switch quantity not an integer
 cc1: all warnings being treated as errors
 Compilation failed
 ada3521
+Wed 20 Mar 2024 09:01:52 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:127:49: error: expected ‘)’ before '['
+  127 |     if (carac == '(' || carac == '{' || carac ++ '['){
+      |        ~                                        ^~~~
+      |                                                 )
+exercises.c:128:18: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  128 |       push(pila, carac);
+      |                  ^~~~~
+      |                  |
+      |                  char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:129:56: error: expected ‘)’ before ']'
+  129 |     } else if (carac == ')' || carac == '}' || carac ++ ']'){
+      |               ~                                        ^~~~
+      |                                                        )
+exercises.c:137:17: error: switch quantity not an integer
+  137 |         switch (top(pila)){
+      |                 ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+9639f6e
