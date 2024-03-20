@@ -742,3 +742,14 @@ Wed 20 Mar 2024 09:18:49 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 363803a
+Wed 20 Mar 2024 09:19:03 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:15: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   49 |       ptrDato = i;
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+3bd0003
