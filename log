@@ -715,3 +715,14 @@ Wed 20 Mar 2024 09:16:21 PM UTC:
  tests:  8|1
 total_score: 60/70
 3c585a6
+Wed 20 Mar 2024 09:18:22 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:15: error: ‘ptrDato’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   49 |      *ptrDato = i;
+      |      ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e232a3b
