@@ -97,22 +97,18 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
-  if (top(P1) != NULL || top(P2) != NULL) return ;
   Stack* PilaAux = create_stack();
   
   while (top(P1) != NULL){
     push(PilaAux, top(P1));
     pop(P1);
-    top(P1);
   }
 
   while (top(PilaAux) != NULL){
     push(P2, top(PilaAux));
+    push(P1, top(PilaAux));
     pop(PilaAux);
-    top(PilaAux);
   }
-
-  copia_pila(P2, P1);
 }
 
 /*
