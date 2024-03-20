@@ -370,3 +370,26 @@ exercises.c:137:17: error: switch quantity not an integer
 cc1: all warnings being treated as errors
 Compilation failed
 30ab96e
+Wed 20 Mar 2024 09:08:15 PM UTC: 
+ exercises.c | 18 +++++++-----------
+ 1 file changed, 7 insertions(+), 11 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  128 |       push(pila, (void *) carac);
+      |                  ^
+exercises.c:137:28: error: dereferencing ‘void *’ pointer [-Werror]
+  137 |       if ((carac == ')' && *top(pila) != '(')
+      |                            ^~~~~~~~~~
+exercises.c:137:28: error: void value not ignored as it ought to be
+exercises.c:138:31: error: dereferencing ‘void *’ pointer [-Werror]
+  138 |           || (carac == ']' && *top(pila) != '[')
+      |                               ^~~~~~~~~~
+exercises.c:138:31: error: void value not ignored as it ought to be
+exercises.c:139:31: error: dereferencing ‘void *’ pointer [-Werror]
+  139 |           || (carac == '}' && *top(pila) != '{')){
+      |                               ^~~~~~~~~~
+exercises.c:139:31: error: void value not ignored as it ought to be
+cc1: all warnings being treated as errors
+Compilation failed
+f3db878
