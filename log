@@ -647,3 +647,13 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 b704134
+Wed 20 Mar 2024 09:11:10 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:19: error: invalid use of void expression
+  128 |       push(pila, ((void) carac));
+      |                  ~^~~~~~~~~~~~~
+Compilation failed
+885ef55
