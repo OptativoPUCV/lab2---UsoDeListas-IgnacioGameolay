@@ -657,3 +657,13 @@ exercises.c:128:19: error: invalid use of void expression
       |                  ~^~~~~~~~~~~~~
 Compilation failed
 885ef55
+Wed 20 Mar 2024 09:11:19 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:26: error: invalid type argument of unary ‘*’ (have ‘int’)
+  128 |       push(pila, ((void) *carac));
+      |                          ^~~~~~
+Compilation failed
+f284797
