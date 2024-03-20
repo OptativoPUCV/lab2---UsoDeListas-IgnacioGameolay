@@ -726,3 +726,14 @@ exercises.c:49:15: error: ‘ptrDato’ may be used uninitialized in this functi
 cc1: all warnings being treated as errors
 Compilation failed
 e232a3b
+Wed 20 Mar 2024 09:18:44 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:15: error: ‘ptrDato’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   49 |      *ptrDato = i;
+      |      ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+1c4987c
