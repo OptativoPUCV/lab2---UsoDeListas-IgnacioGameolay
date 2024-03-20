@@ -511,3 +511,26 @@ exercises.c:139:31: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 be54975
+Wed 20 Mar 2024 09:09:47 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  128 |       push(pila, (void *) carac);
+      |                  ^
+exercises.c:138:38: error: dereferencing ‘void *’ pointer [-Werror]
+  138 |           || (carac == ']' && (char*)*top(pila) != '[')
+      |                                      ^~~~~~~~~~
+exercises.c:138:31: error: invalid use of void expression
+  138 |           || (carac == ']' && (char*)*top(pila) != '[')
+      |                               ^
+exercises.c:139:38: error: dereferencing ‘void *’ pointer [-Werror]
+  139 |           || (carac == '}' && (char*)*top(pila) != '{')){
+      |                                      ^~~~~~~~~~
+exercises.c:139:31: error: invalid use of void expression
+  139 |           || (carac == '}' && (char*)*top(pila) != '{')){
+      |                               ^
+cc1: all warnings being treated as errors
+Compilation failed
+917366a
