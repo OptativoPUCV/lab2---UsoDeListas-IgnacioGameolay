@@ -134,7 +134,7 @@ int parentesisBalanceados(char *cadena) {
       }
       
       if (top(pila) != NULL){
-        switch (*top(pila)){
+        switch (*(top(pila))){
           case '{':
           if (carac == '}') pop(pila);
           case '[':

@@ -353,3 +353,20 @@ exercises.c:137:17: error: switch quantity not an integer
 cc1: all warnings being treated as errors
 Compilation failed
 4d6f7d7
+Wed 20 Mar 2024 09:04:43 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+  128 |       push(pila, *carac);
+      |                  ^~~~~~
+exercises.c:137:17: error: dereferencing ‘void *’ pointer [-Werror]
+  137 |         switch (*(top(pila))){
+      |                 ^~~~~~~~~~~~
+exercises.c:137:17: error: switch quantity not an integer
+  137 |         switch (*(top(pila))){
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+30ab96e
