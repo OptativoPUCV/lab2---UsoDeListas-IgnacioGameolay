@@ -140,6 +140,7 @@ int parentesisBalanceados(char *cadena) {
         free(pila);
         return 0;
       }
+      pop(pila);
     }
     
   }
