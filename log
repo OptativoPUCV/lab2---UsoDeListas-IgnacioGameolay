@@ -598,3 +598,24 @@ exercises.c:128:18: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 4507b84
+Wed 20 Mar 2024 09:10:31 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: invalid type argument of unary ‘*’ (have ‘int’)
+  128 |       push(pila, *(carac);
+      |                  ^~~~~~~~
+exercises.c:128:26: error: expected ‘)’ before ‘;’ token
+  128 |       push(pila, *(carac);
+      |           ~              ^
+      |                          )
+exercises.c:128:27: error: expected ‘;’ before ‘}’ token
+  128 |       push(pila, *(carac);
+      |                           ^
+      |                           ;
+  129 | 
+  130 |     } else if (carac == ')' || carac == '}' || carac == ']'){
+      |     ~                      
+Compilation failed
+c44ade8
