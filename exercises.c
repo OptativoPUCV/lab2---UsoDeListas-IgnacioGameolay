@@ -132,11 +132,11 @@ int parentesisBalanceados(char *cadena) {
       if (top(pila) != NULL){
         switch (top(pila)){
           case '{':
-          if (cartac == '}') pop(pila);
+          if (carac == '}') pop(pila);
           case '[':
-          if (cartac == ']') pop(pila);
+          if (carac == ']') pop(pila);
           case '(':
-          if (cartac == ')') pop(pila);
+          if (carac == ')') pop(pila);
           default: return 0;
         }
       }

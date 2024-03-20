@@ -206,3 +206,41 @@ exercises.c:135:15: note: each undeclared identifier is reported only once for e
 cc1: all warnings being treated as errors
 Compilation failed
 5373b82
+Wed 20 Mar 2024 09:00:51 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  122 |   Stack* pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:122:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:123:32: error: multi-character character constant [-Werror=multichar]
+  123 |   for (int i = 0; cadena[i] != '/0'; i++){
+      |                                ^~~~
+exercises.c:125:49: error: expected ‘)’ before '['
+  125 |     if (carac == '(' || carac == '{' || carac ++ '['){
+      |        ~                                        ^~~~
+      |                                                 )
+exercises.c:126:18: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  126 |       push(pila, carac);
+      |                  ^~~~~
+      |                  |
+      |                  char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:127:56: error: expected ‘)’ before ']'
+  127 |     } else if (carac == ')' || carac == '}' || carac ++ ']'){
+      |               ~                                        ^~~~
+      |                                                        )
+exercises.c:133:17: error: switch quantity not an integer
+  133 |         switch (top(pila)){
+      |                 ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+ada3521
