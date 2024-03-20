@@ -557,3 +557,14 @@ exercises.c:139:32: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 fc8809c
+Wed 20 Mar 2024 09:10:02 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:18: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  128 |       push(pila, (void *) carac);
+      |                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+5b6349c
